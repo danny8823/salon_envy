@@ -1,6 +1,6 @@
 import { useScroll, useTransform } from "framer-motion"
 import { Link } from "react-scroll"
-import {Header, BackgroundImg, Nav, Img, Paragraph, Title, Section, AboutSection, AboutTitle, AboutParagraph, ContactSection, ContactParagraph, ContactTitle, Icons, IconText, Footer, HeaderTitle} from './style'
+import {Header, BackgroundImg,Logo, Nav, Img, Paragraph, Title, Section, AboutSection, AboutTitle, AboutParagraph, ContactSection, ContactParagraph, ContactTitle, Icons, IconText, Footer, HeaderTitle} from './style'
 import bannerimg from './images/banner.jpg'
 import hair1 from './images/hairdone.jpg'
 import model1 from './images/model1.jpg'
@@ -12,7 +12,6 @@ import team from './images/team.jpg'
 import phone from './images/phone.png'
 import mail from './images/mail.png'
 import yelp from './images/yelp.png'
-
 const App = () => {
 
   const { scrollYProgress } = useScroll()
@@ -31,34 +30,34 @@ const App = () => {
         <HeaderTitle style={{x}} id  = 'home'>
         From Ordinary to Extraordinary: Elevate Your Image with Us
         </HeaderTitle>
-        <Title style={{x}}>Salon Envy, your next salon.</Title>
+        <Title style={{x}}>Envy Salon</Title>
       </Header>
       <Section>
         <Img src = {hair1} alt = 'woman getting hair done'/>
         <Paragraph style ={{y}}>
-          "At Salon Envy our dedicated hairdressers turn your hair into a work of art, with years of experience we put great care and dedication to service you. We guarantee you will love your hair."
+          At Salon Envy our dedicated hairdressers turn your hair into a work of art, with years of experience we put great care and dedication to service you. We guarantee you will love your hair.
         </Paragraph>
       </Section>
       <Section>
         <Paragraph style ={{y}}>
-          "Modeling to just getting your hair done for a night out"
+          Hair styles for modeling
         </Paragraph>
         <Img src = {model1} alt = 'model with purple hair'/>
       </Section>
       <Section>
         <Img src = {model2} alt = 'model'/>
-        <Paragraph style ={{y}}>Modeling styles</Paragraph>
+        <Paragraph style ={{y}}>To styles for a fun night out</Paragraph>
       </Section>
       <Section>
-        <Paragraph style ={{y}}>Check it out</Paragraph>
+        <Paragraph style ={{y}}>Hair stylists with years of professional experience!</Paragraph>
         <Img src = {hair2} alt = 'woman getting hair done'/>
       </Section>
       <Section>
         <Img src = {model3} alt = 'model'/>
-        <Paragraph style ={{y}}>Styling for photoshoots</Paragraph>
+        <Paragraph style ={{y}}>Photoshoot styling</Paragraph>
       </Section>
       <Section>
-        <Paragraph style ={{y}}>For weddings</Paragraph>
+        <Paragraph style ={{y}}>And for weddings!</Paragraph>
         <Img src = {wedding} alt = 'wedding photo'/>
       </Section>
       <AboutSection id = 'about'>
@@ -69,7 +68,6 @@ const App = () => {
         </AboutParagraph>
       </AboutSection>
       <ContactSection id = 'contact'>
-        <Link name = 'contact'/>
         <ContactTitle>
           Contact
         </ContactTitle>
