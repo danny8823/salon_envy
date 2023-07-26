@@ -1,4 +1,5 @@
 import { useScroll, useTransform } from "framer-motion"
+import { Link } from "react-scroll"
 import {Header, BackgroundImg, Nav, Img, Paragraph, Title, Section, AboutSection, AboutTitle, AboutParagraph, ContactSection, ContactParagraph, ContactTitle, Icons, IconText, Footer, HeaderTitle} from './style'
 import bannerimg from './images/banner.jpg'
 import hair1 from './images/hairdone.jpg'
@@ -23,11 +24,11 @@ const App = () => {
       <Header>
         <BackgroundImg src = {bannerimg} alt ="banner image"/>
         <Nav>
-          <a href = '#'>Home</a>
-          <a href = '#'>About</a>
-          <a href = '#'>Contact</a>
+          <Link to = 'home' spy={true} smooth={true} offset={50} duration={500}>Home</Link>
+          <Link to = 'contact' spy={true} smooth={true} offset={50} duration={500}>Contact</Link>
+          <Link to = 'about' spy={true} smooth={true} offset={50} duration={500}>About</Link>
         </Nav>
-        <HeaderTitle style={{x}}>
+        <HeaderTitle style={{x}} id  = 'home'>
         From Ordinary to Extraordinary: Elevate Your Image with Us
         </HeaderTitle>
         <Title style={{x}}>Salon Envy, your next salon.</Title>
@@ -60,14 +61,15 @@ const App = () => {
         <Paragraph style ={{y}}>For weddings</Paragraph>
         <Img src = {wedding} alt = 'wedding photo'/>
       </Section>
-      <AboutSection>
+      <AboutSection id = 'about'>
         <AboutTitle>About us</AboutTitle>
         <Img src = {team} alt = 'team of hairdressers'/>
         <AboutParagraph>
           We are a team of dedicated hairdressers, working hard to bring out the best from your hair.
         </AboutParagraph>
       </AboutSection>
-      <ContactSection>
+      <ContactSection id = 'contact'>
+        <Link name = 'contact'/>
         <ContactTitle>
           Contact
         </ContactTitle>
@@ -76,13 +78,13 @@ const App = () => {
         </ContactParagraph>
         <IconText><Icons src = {phone} alt = 'phone logo'/> 777-100-2000</IconText>
         <IconText><Icons src = {mail} alt = 'email logo'/>EnvySalon@gmail.com</IconText>
-        <IconText><Icons src = {yelp} alt = 'yelp logo'/><a href = '#'>Envy Salon</a></IconText>
+        <IconText><Icons src = {yelp} alt = 'yelp logo'/>Envy Salon</IconText>
       </ContactSection>
       <Footer>
         <small>Trademark of Envy Salons Inc.</small>
-        <a href = '#'>Home</a>
-        <a href = '#'>Contact</a>
-        <a href = '#'>About</a>
+        <Link to = 'home' spy={true} smooth={true} offset={50} duration={500}>Home</Link>
+        <Link to = 'contact' spy={true} smooth={true} offset={50} duration={500}>Contact</Link>
+        <Link to = 'about' spy={true} smooth={true} offset={50} duration={500}>About</Link>
       </Footer>
     </>
   );
