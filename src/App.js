@@ -32,9 +32,9 @@ const App = () => {
         </HeaderTitle>
         <Title style={{x}}>Envy Salon</Title>
       </Header>
-      <Section>
+      <Section xs = "12"  sm = "6" md = "8">
         <Img src = {hair1} alt = 'woman getting hair done'/>
-        <Paragraph style ={{y}}>
+        <Paragraph style ={{y}} >
           At Salon Envy our dedicated hairdressers turn your hair into a work of art, with years of experience we put great care and dedication to service you. We guarantee you will love your hair.
         </Paragraph>
       </Section>
@@ -46,7 +46,7 @@ const App = () => {
       </Section>
       <Section>
         <Img src = {model2} alt = 'model'/>
-        <Paragraph style ={{y}}>To styles for a fun night out</Paragraph>
+        <Paragraph style ={{y}}>Hair dye's safe for your hair</Paragraph>
       </Section>
       <Section>
         <Paragraph style ={{y}}>Hair stylists with years of professional experience!</Paragraph>

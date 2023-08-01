@@ -1,6 +1,13 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
+function getWidthString(span) {
+  if(!span) return;
+
+  let width = span / 12 * 100;
+  return `width: ${width}%`
+}
+
 export const Header = styled.div`
   height: 100vh;
   width: 100%;
@@ -66,6 +73,23 @@ export const Paragraph = styled(motion.p)`
   z-index: 1;
   margin: 17vh;
   transition: all 2s ease-in-out;
+  ${({xs}) => (xs ? getWidthString(xs) : "width:100%" )};
+
+  @media only screen and (max-width: 768px) {
+    ${({sm}) => (sm && getWidthString(sm))};
+    margin: 6vh;
+    font-size:16px;
+  }
+
+  @media only screen and (min-width: 992px) {
+    ${({md}) => (md && getWidthString(md))};
+    
+  }
+
+  @media only screen and (min-width: 1200px) {
+    ${({lg}) => (lg && getWidthString(lg))};
+    
+  }
 `;
 
 export const Img = styled.img`
